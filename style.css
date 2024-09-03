@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Arial';
+}
+main {
+  width: fit-content;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  gap: 1rem;
+}
+
+canvas {
+  background-color: black;
+  border-radius: 5px;
+}
+
+.score-container {
+  width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.scoreEl {
+  font-weight: 500;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-self: center;
+}
+
+.score {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.game-container {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.game-over-screen {
+  position: absolute;
+  color: white;
+  inset: 0;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+
+.winner-text {
+  font-size: 50px;
+}
+
+.play-again-text {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.play-again-btn {
+  padding: 0.5rem 1rem;
+  font-size: 20px;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 100vw;
+  font-weight: bold;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+    scale: 1.05;
+  }
+}
+
+.game-rules {
+  border: 1px solid;
+  height: fit-content;
+  padding: 10px;
+}
+
+.rules-heading {
+  font-size: 1.5rem;
+}
+
+.points-rule {
+  margin-top: 4px;
+  font-size: 18px;
+}
+
+kbd {
+  border: 2px solid black;
+  box-shadow: 2px 2px black;
+  font-size: 0.85em;
+  line-height: 0.85em;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 3px 5px;
+  white-space: nowrap;
+}
+
+.controls {
+  padding-top: 4px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.control {
+  display: flex;
+  gap: 8px;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.up {
+  margin-top: 5px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  margin-bottom: 3px;
+}

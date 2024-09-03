@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="score-container">
+        <div class="scoreEl">
+          Left Score: <span class="score" id="scoreLeft">0</span>
+        </div>
+        <div class="scoreEl">
+          Right Score: <span class="score" id="scoreRight">0</span>
+        </div>
+      </div>
+      <div class="game-container">
+        <canvas width="800" height="600"></canvas>
+        <div class="game-rules">
+          <h3 class="rules-heading">Game Rules</h3>
+          <p class="points-rule">First to score 10 points wins!</p>
+          <br />
+          <h3 class="rules-heading">Controls</h3>
+          <ul class="controls">
+            <li class="control"><kbd>W</kbd><span> - Left Paddle Up</span></li>
+            <li class="control">
+              <kbd>S</kbd><span> - Left Paddle Down</span>
+            </li>
+            <li class="control">
+              <kbd><span class="arrow up"></span></kbd>
+              <span> - Right Paddle Up</span>
+            </li>
+            <li class="control">
+              <kbd><span class="arrow down"></span></kbd>
+              <span> - Right Paddle Down</span>
+            </li>
+          </ul>
+        </div>
+        <div class="game-over-screen">
+          <p class="winner-text"></p>
+          <p class="play-again-text">
+            Press Enter key or click on the button below to play again!
+          </p>
+          <button class="play-again-btn">Play Again</button>
+        </div>
+      </div>
+
+      <audio src="sounds/ball-hit.mp3" id="ballHit"></audio>
+      <audio src="sounds/game-over.mp3" id="game-over-sound"></audio>
+    </main>
+
+    <script src="index.js"></script>
+    <script src="utils.js"></script>
+    <script src="classes/barClass.js"></script>
+    <script src="classes/ballClass.js"></script>
+    <script src="keyboard.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
